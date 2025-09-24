@@ -1,4 +1,3 @@
-// Result.java
 package assignment2;
 
 public class Result {

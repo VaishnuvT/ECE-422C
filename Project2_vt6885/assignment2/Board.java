@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Board {
     private ArrayList<Code> guesses;
-    private ArrayList<Result> results;  // This should be Result not r
+    private ArrayList<Result> results;
     
     public Board() {
         guesses = new ArrayList<>();
@@ -17,8 +17,12 @@ public class Board {
     }
     
     public void printHistory() {
+        if (guesses.size() == 0) {
+            return;
+        }
+
         for (int i = 0; i < guesses.size(); i++) {
-            System.out.println(guesses.get(i).toString() + "\t\t" + results.get(i).toString());
+            System.out.println(guesses.get(i).toString() + "        " + results.get(i).toString());
         }
     }
 }
